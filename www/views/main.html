@@ -1,0 +1,13 @@
+<ion-view>
+    <ion-header-bar>
+        <button class="button user-icon" ng-click="openCamera()">
+            <div class="icon-cropper">
+                <img ng-src="{{userInformation.picture}}" ng-if="userInformation.picture" >
+                <i class="fas fa-user" ng-if="!userInformation.picture"></i>
+            </div>
+        </button>
+        <a class="button bell-icon" href="#/notifications">
+            <i class="fas fa-bell" ng-class="{'has-notifications': hasPendingNotification}"></i>
+        </a>
+    </ion-header-bar>
+</ion-view>

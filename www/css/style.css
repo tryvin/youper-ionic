@@ -1,1 +1,105 @@
-/* Empty. Add your own CSS if you like */
+.pane, .bar-header {
+    background-color: rgb(104, 104, 104);
+}
+
+.content-padded {
+    padding: 10px;
+}
+
+/* Bar header buttons and styling for icons */
+.bar-header .button {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.bar-header .button i {
+    color: white;
+    font-size: 20px;
+}
+
+/* User Icon Related Stuff */
+.user-icon {
+    padding: 0 !important;
+    width: 32px;
+    height: 32px;
+}
+
+.icon-cropper {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.icon-cropper img {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-cropper i {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+    position: absolute;
+    bottom: -8px;
+    left: 4px;
+}
+
+/* Notification Icon if it has a pending notification */
+
+.has-notifications::after {
+    content: "";
+    background-color: rgb(255, 169, 63);
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    right: 5px;
+    z-index: 99;
+}
+
+/* Notifications internal page items */
+
+.notification-item {
+    position: relative;
+}
+
+.notification-item .item {
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.notification-item .item span {
+    font-size: 10pt;
+    color: rgb(177, 174, 177);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.notification-icon-bigger::after {
+    width: 22px;
+    height: 22px;
+    right: 12px;
+    top: -8px;
+}
+
+.item-large p {
+    white-space: normal;
+    text-overflow: clip;
+}
+
+.notification-image {
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.item-large .button {
+    border-radius: 30px;
+    display: block;
+    width: 80px;
+    margin: 10px auto 0px auto;
+}

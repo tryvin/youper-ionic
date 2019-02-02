@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-header-bar>
+        <button class="button" ng-click="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content class="content-padded">
+        <ion-list>
+            <div class="notification-item notification-icon-bigger" ng-if="notificationData">
+                <ion-item class="item item-large">
+                    <span>{{notificationData.date}}</span>
+                    <h2>{{notificationData.title}}</h2>
+                    <p ng-bind-html="notificationData.body"></p>
+
+                    <center><img ng-if="notificationData.image" ng-src="{{notificationData.image}}" class="notification-image"/></center>
+
+                    <button class="button button-energized" ng-click="backHome()">
+                        Got it!
+                    </button>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

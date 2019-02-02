@@ -1,0 +1,18 @@
+<ion-view>
+    <ion-header-bar>
+        <button class="button" ng-click="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content class="content-padded">
+        <ion-list ng-if="pendingNotifications">
+            <div ng-repeat="item in pendingNotifications" class="notification-item notification-icon-bigger" ng-class="queryClass(item)">
+                <ion-item href="#/notifications/{{item.id}}">
+                    <span>{{item.date}}</span>
+                    <h2>{{item.title}}</h2>
+                    <p>{{item.excerpt}}</p>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>
